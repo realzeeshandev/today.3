@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #55504d, #ff5e62);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.rating-box {
+    background: rgb(0, 0, 0);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    width: 350px;
+    color: white;
+}
+
+.rating {
+    direction: rtl;
+    display: inline-flex;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    font-size: 40px;
+    color: #ccc;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Hover Effect */
+.rating label:hover,
+.rating label:hover ~ label {
+    color: gold;
+}
+
+/* Checked Stars */
+.rating input:checked ~ label {
+    color: gold;
+}
+
+/* Hide All Text Initially */
+.rating-text p {
+    display: none;
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Show Text Based on Selection */
+#star1:checked ~ .rating-text .text1 { display: block; }
+#star2:checked ~ .rating-text .text2 { display: block; }
+#star3:checked ~ .rating-text .text3 { display: block; }
+#star4:checked ~ .rating-text .text4 { display: block; }
+#star5:checked ~ .rating-text .text5 { display: block; }
